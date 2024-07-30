@@ -1,0 +1,23 @@
+name: go
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'go/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'go/**'
+
+jobs:
+  gotest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+      - run: go test
+        working-directory: go
+        
