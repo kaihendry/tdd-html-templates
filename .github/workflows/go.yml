@@ -1,4 +1,4 @@
-name: go
+name: Golang CI
 
 on:
   push:
